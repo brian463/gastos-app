@@ -6,11 +6,13 @@ const List<String> kCategories = [
   'luz',
   'agua',
   'vestimenta',
-  'gusto_extra',
+  'combustible',
+  'mercado',
+  'gasto_extra',
 ];
 
-String categoryLabel(String c) {
-  switch (c) {
+String categoryLabel(String key) {
+  switch (key) {
     case 'comida':
       return 'Comida';
     case 'hogar':
@@ -25,9 +27,13 @@ String categoryLabel(String c) {
       return 'Agua';
     case 'vestimenta':
       return 'Vestimenta';
-    case 'gusto_extra':
-      return 'Gusto extra';
+    case 'combustible':
+      return 'Combustible';
+    case 'mercado':
+      return 'Mercado';
+    case 'gasto_extra':
+      return 'Gasto extra';
     default:
-      return c;
+      return key;
   }
 }

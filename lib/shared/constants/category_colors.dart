@@ -1,14 +1,28 @@
 import 'package:flutter/material.dart';
 
-const Map<String, Color> kCategoryColors = {
-  'comida': Colors.orange,
-  'hogar': Colors.blue,
-  'mascotas': Colors.purple,
-  'internet': Colors.teal,
-  'luz': Colors.amber,
-  'agua': Colors.cyan,
-  'vestimenta': Colors.pink,
-  'gusto_extra': Colors.red,
-};
-
-Color colorForCategory(String c) => kCategoryColors[c] ?? Colors.grey;
+Color colorForCategory(String key) {
+  switch (key) {
+    case 'comida':
+      return Colors.orange;
+    case 'hogar':
+      return Colors.blue;
+    case 'mascotas':
+      return Colors.purple;
+    case 'internet':
+      return Colors.teal;
+    case 'luz':
+      return Colors.amber;
+    case 'agua':
+      return Colors.cyan;
+    case 'vestimenta':
+      return Colors.pink;
+    case 'combustible':
+      return Colors.red;
+    case 'mercado':
+      return Colors.green;
+    case 'gasto_extra':
+      return Colors.brown;
+    default:
+      return Colors.grey;
+  }
+}
