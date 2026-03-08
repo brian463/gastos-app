@@ -1,8 +1,9 @@
-// lib/data/sheets_config.dart
+const String kSheetsUrl =
+    "https://script.google.com/macros/s/AKfycbyHAD0bSYgGExx2h8QZpLfybjO2b65UkzmJyFZ0JtX--LX4KBJt4UtrNbw0JWogsUwuog/exec";
 
-// Se pasan al compilar con: --dart-define=SHEETS_URL=... --dart-define=SHEETS_TOKEN=... --dart-define=SHEETS_USER=...
-const String kSheetsUrl = String.fromEnvironment('SHEETS_URL', defaultValue: '');
-const String kSheetsToken = String.fromEnvironment('SHEETS_TOKEN', defaultValue: '');
-const String kSheetsUser = String.fromEnvironment('SHEETS_USER', defaultValue: 'brian');
+const String kSheetsToken =
+    "brian_2026!Gastos#Web@P3ru_x7Qm9Z1vK2sR5tN825";
+
+const String kSheetsUser = "brian";
 
 bool sheetsConfigOk() => kSheetsUrl.isNotEmpty && kSheetsToken.isNotEmpty;
