@@ -34,7 +34,6 @@
 </head>
 <body>
   <script>
-    // 🔥 Evita que Flutter Web quede cacheado con versiones viejas (GitHub Pages)
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(function (regs) {
         for (const reg of regs) reg.unregister();
