@@ -7,21 +7,15 @@ import 'shared/theme/theme_controller.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ Validar configuración (debe ir dentro de main)
+  // Si falta config, mostramos un mensaje simple
   if (!sheetsConfigOk()) {
     runApp(
-      MaterialApp(
+      const MaterialApp(
         home: Scaffold(
           body: Center(
             child: Text(
-              'Falta configuración.\n\n'
-              'SHEETS_URL: "$kSheetsUrl"\n'
-              'SHEETS_TOKEN vacío?: ${kSheetsToken.isEmpty}\n'
-              'SHEETS_USER: "$kSheetsUser"\n\n'
-              'Compila con:\n'
-              '--dart-define=SHEETS_URL=...\n'
-              '--dart-define=SHEETS_TOKEN=...\n'
-              '--dart-define=SHEETS_USER=...\n',
+              'Falta configuración de Sheets.\n'
+              'Vuelve a compilar la web con --dart-define.',
               textAlign: TextAlign.center,
             ),
           ),
